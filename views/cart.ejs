@@ -1,0 +1,66 @@
+
+
+
+<section class="cart">
+
+<div class="cart-list">
+
+        
+    <h1 class="font-bold text-2xl border-b border-gray-300 w-1/2 mx-auto my-4 mt-16 mb-4">Cart-Items</h1>
+
+        <% if(session.cart){ %>
+
+        
+
+    <% for(let product of Object.values(session.cart.items)){ %>
+
+    
+
+    <div class="flex items-center justify-around border-b border-gray-300 mx-auto w-1/2 my-4 ">
+
+    <div class="flex items-center">
+        <img class="h-20 mr-4 my-4" src="/uploads/images/<%= product.item.productImageName %>" alt="Camera">
+        <span class="font-bold text-lg"><%= product.item.name %></span>
+    </div>
+
+    <div>
+        <span class="font-bold"><%= product.qty %></span>
+    </div>
+
+    <div>
+        <span class="font-bold">$<%= product.item.price %></span>
+    </div>
+
+    </div>
+
+    <% } %>
+
+
+    
+
+    <h1 class="font-bold text-xl mt-16 ml-4 my-2">Total Price : $ <%= session.cart.totalPrice %> </h1>
+    <h1 class="font-bold text-xl ml-4 my-2">Total Qty :  <%= session.cart.totalQty %> </h1>
+
+    <form action="/reset" method="POST">
+    <button class="reset-cart rounded-full py-2 px-2 ml-4 my-2" type="submit">Reset Cart</button>
+        </form>
+
+
+   <% } else{ %>
+
+        <h2 class="font-bold text-2xl text-center">Cart Empty</h2>
+
+   <% } %>
+
+   
+
+</div>
+
+
+
+
+
+
+
+
+</section>

@@ -1,0 +1,50 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100);
+@import url(https://fonts.googleapis.com/css2?family=Lato&display=swap);
+
+
+.price{
+    background-color: #cdcdcd;
+
+}
+
+.add-to-cart {
+    border: 2px solid #FE5F1E;
+    color: #FE5F1E;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .add-to-cart:hover {
+    background: #FE5F1E;
+    color: #fff;
+  }
+  
+  .add-to-cart:focus {
+    outline: none;
+  }
+
+  .cart-list{
+      background-color: #F8F8F8;
+      
+  }
+
+
+  .cart-link{
+    border: 2px solid #FE5F1E;
+    background: #FE5F1E;
+    color: #fff;
+    
+  }
+
+  .cart-link:hover{
+      background: darkorange;
+  }
+
+  i.fas.fa-shopping-cart { 
+      font-size: 24px;
+  }
+
+  .reset-cart{
+    border: 2px solid #FE5F1E;
+    background: #FE5F1E;
+    color: #fff;
+  }

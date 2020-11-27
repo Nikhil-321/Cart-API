@@ -1,0 +1,38 @@
+
+<a class="cart-link rounded-full py-2 px-2" href="/cart"> <i class="fas fa-shopping-cart cart mt-2 mx-2 py-2 px-2 rounded-full"></i><span id="cartCounter" class="font-bold text-xl"><%= session.cart ? session.cart.totalQty : '' %></span></a>
+
+<div class="grid grid-cols-3 col-gap-12 row-gap-12 mt-16">
+
+<% products.forEach(product =>{ %>
+
+
+    <div class="product w-64">
+
+        <img w-64 h-40 src="<%= product.productImagePath %>" alt="">
+
+    <h2 class="font-bold text-2xl text-center mb-4"><%= product.name %></h2>
+    
+    <div class="flex items-center justify-around mb-4">
+       <span class=" font-bold price rounded-full px-2 py-2">$<%= product.price %></span> 
+       <span class=" font-bold price rounded-full px-2 py-2">Qty : <%= product.quantity%></span> 
+
+    </div>
+    <div class="desc mx-auto text-center font-bold">
+        <p><%= product.desc %></p>
+    </div>
+
+        <div>
+    <button data-product = '<%= JSON.stringify(product) %>' class="rounded-full add-to-cart text-white-500 font-bold px-2 px-4 mx-auto block mt-4">Add to cart</button>
+    </div>
+    </div>
+
+    
+<% }) %>
+
+
+</div>
+
+
+
+
+
